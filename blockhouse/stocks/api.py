@@ -1,6 +1,5 @@
 import os
 import requests
-from sklearn.linear_model import LinearRegression, LogisticRegression
 from .models import StockData
 from datetime import datetime
 
@@ -30,8 +29,3 @@ def fetch_stock_data(symbol):
             )
     else:
         print('Error fetching data:', data.get('Error Message', 'Unknown error'))
-
-from sklearn.model_selection import train_test_split
-
-logreg = LogisticRegression(random_state=16)
-linreg = LinearRegression()

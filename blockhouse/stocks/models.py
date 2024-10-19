@@ -9,6 +9,7 @@ class StockData(models.Model):
     high_price = models.DecimalField(max_digits=10, decimal_places=3)
     low_price = models.DecimalField(max_digits=10, decimal_places=3)
     volume = models.BigIntegerField()
+    is_predicted = models.BooleanField(default=False) # Marks prediction
 
     class Meta:
         unique_together = ('symbol', 'date')
