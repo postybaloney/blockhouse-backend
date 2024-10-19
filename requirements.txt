@@ -8,3 +8,5 @@ psycopg2-binary
 django-environ
 pandas
 numpy
+matplotlib
+reportlab

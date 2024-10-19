@@ -19,4 +19,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('stocks/', include('stocks.urls')),
+    path('stocks/', include('stocks.urls')),
 ]

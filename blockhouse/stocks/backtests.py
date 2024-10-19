@@ -56,3 +56,18 @@ def backtest_strategy(symbol, initial_investment, short_window=50, long_window=2
         'Max Drawdown': max_drawdown * 100,
         'Number of Trades': num_trades
     }
+
+def calculate_metrics(backtest_results):
+    """
+    Calculate key performance metrics from the backtest
+    """
+    total_investment = backtest_results['Initial Investment']
+    final_value = backtest_results["Final Monetary Value ($)"]
+    roi = (final_value - total_investment) / total_investment * 100
+
+    total_trades = backtest_results['Number of Trades']
+    
+    return {
+        'ROI': roi,
+        'Total Trades': total_trades,
+    }
